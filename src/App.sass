@@ -1,0 +1,118 @@
+@import "themes"
+
+/******************************************************************************
+ * Main
+ ******************************************************************************/
+
+$big-font: 60px;
+$theme-buttons-width: 150px
+$theme-buttons-padding: 20px
+$calculator-width: 2 * $theme-buttons-width + 3 * $theme-buttons-padding
+ 
+%rounded
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	border-radius: 5px
+  
+%border
+	border-style: solid
+	border-width: 1px
+	
+%no-select 
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+			
+*
+	padding: 0
+	margin: 0
+	font-size: 16px
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+h1 
+	font-size: $big-font
+	padding: 20px 0
+	
+button
+	@extend %rounded
+	cursor: pointer
+	outline: none
+	border: none 
+	&:hover
+		transition: all 0.5s ease
+	
+#main
+	@extend %rounded
+	@extend %border
+	@extend %border-color
+	width: $calculator-width
+	margin: 40px auto
+	padding: 20px
+	
+#root
+	margin: 0 auto
+	width: $calculator-width
+	
+#theme-buttons 
+	button
+		width: $theme-buttons-width
+		padding: $theme-buttons-padding
+	button:first-of-type
+		margin-right: 20px
+		
+/******************************************************************************
+ * CALULATOR
+ ******************************************************************************/
+
+#calc-screen
+	@extend %rounded
+	@extend %border
+	@extend %border-color
+	height: 80px;
+	padding: 10px
+	margin: 20px 0
+	
+#calc-screen div
+	display: flex
+	justify-content: flex-end
+	overflow: hidden
+	span
+		align-self: flex-end
+		white-space: nowrap
+	&:first-of-type
+		height: 20px
+	&:last-of-type
+		height: 40px
+	
+#calc-result
+	font-size: 20px
+	
+#calc-buttons
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	
+#calc-buttons div
+	@extend %rounded
+	@extend %border
+	@extend %border-color
+	@extend %no-select
+	cursor: pointer
+	text-align: center
+	padding: 10px
+	margin: 10px 0
+	flex-basis: 23%
+	font-size: 26px
+	&:hover
+		transition: all 2 ease
+		opacity: 0.8
+	
+#calc-buttons .btn-sign
+	@extend %btn-sign
+	&:hover
+		opacity: 0.8

@@ -1,0 +1,14 @@
+.light-theme {
+   --primary-color: #007bff;
+   --disabled-color: #00FF00;
+}
+.dark-theme {
+   --primary-color: #FFFF00;
+   --disabled-color: #FF0000;
+}
+
+
+div {
+   background: var(--primary-color);
+   color: var(--disabled-color);
+}

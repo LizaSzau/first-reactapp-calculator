@@ -1,0 +1,46 @@
+/******************************************************************************
+ * Themes
+ ******************************************************************************/
+
+.light-theme 
+   --color-1: #88E4C5
+   --color-2: #2F4F4F
+   --color-3: #1E90FF
+   --color-4: #C6F1E2
+
+.dark-theme 
+   --color-1: #2F4F4F
+   --color-2: #88E4C5
+   --color-3: #00BFFF
+   --color-4: #2A4746
+
+body
+	background: var(--color-1)
+	color: var(--color-2)
+
+#theme-buttons 
+	button
+		background-color: var(--color-2)
+		color: var(--color-1)
+		&:hover
+			opacity: 0.8
+	
+%border-color
+	border-color: var(--color-2)
+	
+/******************************************************************************
+ * CALULATOR
+ ******************************************************************************/
+ 
+%btn-sign
+	background-color: var(--color-2)
+	color: var(--color-1)
+		
+#calc-buttons .btn-number
+	&:hover
+		background-color: var(--color-4)
+
+#calc-buttons .btn-sign
+	&.equal
+		background: var(--color-3)
+		border-color: var(--color-3)
