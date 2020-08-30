@@ -1,3 +1,5 @@
+# Calculator
+
 It's a simple calculator with two themes.
 It's my very first step to learn ReactJS and Sass CSS.
 
